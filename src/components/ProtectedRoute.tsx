@@ -25,18 +25,8 @@ const ProtectedRoute = ({ children, requiredRole }: ProtectedRouteProps) => {
         console.log('User has no role, redirecting to settings');
         navigate('/settings');
       } else if (requiredRole && user.role !== requiredRole) {
-        // Special handling for Teacher Assistant
-        const isTeacherAssistantRoute = window.location.pathname === '/teacher-assistant';
-        const isAllowedForTeacherAssistant = 
-          isTeacherAssistantRoute && 
-          (user.role === 'teacher' || user.role === 'school_admin');
-        
-        if (isAllowedForTeacherAssistant) {
-          setShouldRender(true);
-        } else if (requiredRole !== user.role) {
-          console.log('User does not have required role, redirecting to dashboard');
-          navigate('/dashboard');
-        }
+        console.log('User does not have required role, redirecting to dashboard');
+        navigate('/dashboard');
       } else {
         setShouldRender(true);
       }

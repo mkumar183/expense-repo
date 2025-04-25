@@ -16,7 +16,7 @@ import {
   Bus,
   Bot // Adding Bot icon from lucide-react
 } from 'lucide-react';
-import TeacherAssistantModal from './TeacherAssistantModal';
+
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { user, logout } = useAuth();
@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <LayoutDashboard className="mr-2 h-5 w-5" />
             Dashboard
           </Button>
-          
+
           <Button 
             variant="ghost" 
             className="w-full justify-start text-primary-foreground hover:text-primary-foreground hover:bg-primary/80"

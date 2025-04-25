@@ -19,7 +19,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { StreamManagement } from '@/components/settings/StreamManagement';
 
 
 const Settings = () => {
